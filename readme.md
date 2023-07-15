@@ -1,28 +1,23 @@
-### 实现目标
+## 实现目标
 
 通过 command line（命令行），实现可交互的指标结果查询
 
-### 安装前的注意事项
+## 安装前的注意事项
 
-```
-1. NodeJs版本 >= 16
+1. NodeJs 版本 >= 16
+2. 如果是在 Windows 环境下，需要执行额外步骤。首先执行 `get-executionpolicy`，如果输出为 `RemoteSigned`，则 ok；如果输出为 `Restricted`，则继续输入 `set-executionpolicy remotesigned`，然后再次输入 `get-executionpolicy` 检查输出是否为 `RemoteSigned`。
 
-2. 如果是在windows环境下，需要执行额外步骤：
-首先执行get-executionpolicy，如果输出为RemoteSigned，则ok
-如果输出为Restricted，则继续输入set-executionpolicy remotesigned，然后再次输入get-executionpolicy检查输出是否为RemoteSigned
-```
-
-### 安装步骤
+## 安装步骤
 
 ```shell
-git clone https://github.com:lxr599/Opendigger_CLI.git
-sudo npm install
-sudo npm link
+$ git clone https://github.com:lxr599/Opendigger_CLI.git
+$ sudo npm install
+$ sudo npm link
 
 安装结束后执行 opendigger -h 查看是否安装成功
 ```
 
-### Usage
+## Usage
 
 ```shell
 $ opendigger -h
@@ -39,7 +34,7 @@ Options:
 
 
 
-### 实现的主要功能
+## 实现的主要功能
 
 - 查询**特定仓库**在**特定指标**上的数据
 
@@ -48,7 +43,7 @@ Options:
   举例：
 
   ```shell
-  opendigger --repo X-lab2017/open-digger --metric OpenRank
+  $ opendigger --repo X-lab2017/open-digger --metric OpenRank
   repo.name: X-lab2017/open-digger
   repo.url: https://github.com/X-lab2017/open-digger
   openrank:
@@ -73,7 +68,7 @@ Options:
   举例：
 
   ```shell
-  opendigger --repo X-lab2017/open-digger --month 2023-01
+  $ opendigger --repo X-lab2017/open-digger --month 2023-01
   repo.name: X-lab2017/open-digger
   repo.url: https://github.com/X-lab2017/open-digger
   month: 2023-01
@@ -93,7 +88,7 @@ Options:
   举例：
 
   ```shell
-  opendigger --repo X-lab2017/open-digger --month 2023-01 --metric OpenRank
+  $ opendigger --repo X-lab2017/open-digger --month 2023-01 --metric OpenRank
   repo.name: X-lab2017/open-digger
   repo.url: https://github.com/X-lab2017/open-digger
   month: 2023-01
@@ -105,7 +100,7 @@ Options:
   格式：在任意命令后添加 `-d` 选项，即可下载终端输出的报告
 
   ```shell
-  opendigger --repo X-lab2017/open-digger --month 2023-01  -d out.json
+  $ opendigger --repo X-lab2017/open-digger --month 2023-01  -d out.json
   repo.name: X-lab2017/open-digger
   repo.url: https://github.com/X-lab2017/open-digger
   downloading report to out.json...
