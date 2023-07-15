@@ -21,7 +21,7 @@ $ sudo npm link
 
 ```shell
 $ opendigger -h
-Usage: index [options]
+Usage: opendigger [options]
 
 Options:
   -V, --version                 output the version number
