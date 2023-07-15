@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.21.1",
     "commander": "^11.0.0",
     "git-clone": "^0.2.0",
     "open": "^9.1.0",
