@@ -30,17 +30,3 @@ function validateDateFormat(value) {
 const options=program.opts();
 
 utils.printResult(base_url, base_repo_url, options)
-
-// function printResult(base_url,base_repo_url,options){
-//     var repo_url = `${base_repo_url}${options.repo}`
-//     if(options.repo){
-//         var low_case_metric = (options.metric).toLowerCase()
-//         base_url = `${base_url}${options.repo}/${low_case_metric}.json`
-//         console.log(`repo.name: ${options.repo}\nrepo.url: ${repo_url}`)
-//         utils.getRepoMonthResult(base_url, options, low_case_metric)
-//     }else{
-//         console.error('Please specify a repo!')
-//         program.help()
-//     }
-// }
-
